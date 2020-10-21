@@ -134,6 +134,7 @@ const NewPlate = () => {
     const onSubmit = async (data) => {
         const plate = {
             ...data,
+            price: Number(data.price.toFixed(2)),
             image: URL,
             available: true
         }
@@ -260,7 +261,6 @@ const NewPlate = () => {
                                             acceptedFiles={['image/*']}
                                             dropzoneText={"Upload a picture of the plate"}
                                             onChange={(files) => {
-                                                console.log(files)
                                                 if (files.length > 0)
                                                     handleUpload(files);
                                                 setValue('image', files)
