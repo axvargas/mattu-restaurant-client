@@ -134,7 +134,7 @@ const NewPlate = () => {
     const onSubmit = async (data) => {
         const plate = {
             ...data,
-            price: Number(data.price.toFixed(2)),
+            price: Number(Number.parseFloat(data.price).toFixed(2)),
             image: URL,
             available: true
         }
