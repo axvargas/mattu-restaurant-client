@@ -100,8 +100,7 @@ const Order = ({ orderInfo }) => {
                             color="primary"
                             disabled={formState.isSubmitting || !formState.isValid}
                           >
-                            Set time
-                    		  </Button>
+                            Set time</Button>
                         </form>
           }
           {timeToBeReady > 0 &&
