@@ -119,7 +119,9 @@ const NewPlate = () => {
       .required('Type the description please')
   });
 
-  const { handleSubmit, errors, register, formState, control, setError, setValue } = useForm({
+  const { 
+    handleSubmit, errors, register, formState, control, setError, setValue 
+  } = useForm({
     defaultValues: {
       name: '',
       price: null,
@@ -292,9 +294,8 @@ const NewPlate = () => {
                 label="Description"
                 name="description"
                 autoComplete="off"
-                inputRef={register}
-              />
-              {errors.description && <ErrorMessage message={errors.description.message} />}
+                inputRef={register}/>
+              {errors.description && <ErrorMessage message={errors.description.message}/>}
               <Button
                 type={'submit'}
                 fullWidth
@@ -303,8 +304,8 @@ const NewPlate = () => {
                 disabled={formState.isSubmitting}
                 className={classes.submit}
               >
-                                Add the new plate
-                    		</Button>
+                Add the new plate
+              </Button>
             </form>
           </div>
         </Container>

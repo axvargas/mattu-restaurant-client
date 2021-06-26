@@ -87,7 +87,9 @@ const Order = ({ orderInfo }) => {
                               type="number"
                               autoComplete="off"
                               inputRef={register}
-                              FormHelperTextProps={{ style: { color: theme.palette.primary.main } }}
+                              FormHelperTextProps={{ 
+                                style: { color: theme.palette.primary.main } 
+                              }}
                               helperText={errors.time ? errors.time.message : null}
                             />
                           </Box>
@@ -98,8 +100,8 @@ const Order = ({ orderInfo }) => {
                             color="primary"
                             disabled={formState.isSubmitting || !formState.isValid}
                           >
-                                Set time
-                    		</Button>
+                            Set time
+                    		  </Button>
                         </form>
           }
           {timeToBeReady > 0 &&
