@@ -1,28 +1,28 @@
-import React, { useContext, useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react';
 import {
-    Grid,
-    Box,
-    TextField,
-    MenuItem
-} from '@material-ui/core'
+  Grid,
+  Box,
+  TextField,
+  MenuItem
+} from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import FirebaseContext from '../../firebase/context'
+import FirebaseContext from '../../firebase/context';
 const Plate = ({ plate }) => {
-    const { db } = useContext(FirebaseContext)
-    const matches = useMediaQuery('(min-width:380px)');
-    const { id, name, category, price, description, image, available } = plate
-    const availableRef = useRef(plate.available)
-    const [className, setClassName] = useState(available)
-    const updateAvailability = async (value) => {
-        try {
-            await db.collection('plates')
-                .doc(id)
-                .update({ available: value })
-            setClassName(value)
-        } catch (error) {
-            console.log(error);
-        }
+  const { db } = useContext(FirebaseContext);
+  const matches = useMediaQuery('(min-width:380px)');
+  const { id, name, category, price, description, image, available } = plate;
+  const availableRef = useRef(plate.available);
+  const [className, setClassName] = useState(available);
+  const updateAvailability = async (value) => {
+    try {
+      await db.collection('plates')
+        .doc(id)
+        .update({ available: value });
+      setClassName(value);
+    } catch (error) {
+      console.log(error);
     }
+  };
 
     return (
         <Grid item xs={12}>
@@ -44,29 +44,29 @@ const Plate = ({ plate }) => {
                         <Box id="description" fontWeight="fontWeightRegular"> {description}</Box>
                         <Box mt={1}>
 
-                            <TextField
-                                id="outlined-select-status"
-                                size="small"
-                                select
-                                value={available}
-                                variant="outlined"
-                                color="primary"
-                                inputRef={availableRef}
-                                onChange={(e) => updateAvailability(e.target.value)}
-                            >
-                                <MenuItem value={true}>
+              <TextField
+                id="outlined-select-status"
+                size="small"
+                select
+                value={available}
+                variant="outlined"
+                color="primary"
+                inputRef={availableRef}
+                onChange={(e) => updateAvailability(e.target.value)}
+              >
+                <MenuItem value={true}>
                                     Available
-                                </MenuItem>
-                                <MenuItem value={false}>
+                </MenuItem>
+                <MenuItem value={false}>
                                     Not available
-                                </MenuItem>
-                            </TextField>
-                        </Box>
-                    </Box>
-                </Box>
+                </MenuItem>
+              </TextField>
             </Box>
-        </Grid >
-    )
-}
+          </Box>
+        </Box>
+      </Box>
+    </Grid >
+  );
+};
 
-export default Plate
+export default Plate;
