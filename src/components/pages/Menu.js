@@ -25,13 +25,14 @@ const Menu = () => {
 
     return (
         <>
-            <Typography variant="h6" color="initial">Menu</Typography>
+            <Typography variant="h6" color="initial" className="menu">Menu</Typography>
             <Box mt={2} mb={4}>
                 <Button
                     component={Link}
                     to="/new-plate"
                     variant="contained"
                     color="primary"
+                    id="add-new-plate"
                 >
                     Add new plate
                 </Button>

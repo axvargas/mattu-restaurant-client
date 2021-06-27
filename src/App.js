@@ -24,5 +24,4 @@ const App = () => {
 		</FirebaseProvider>
 	);
 }
-
 export default App;

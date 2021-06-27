@@ -33,15 +33,15 @@ const Plate = ({ plate }) => {
                             <img alt="plate_img" src={image} height="100%" width="100%" />
                         </Box>
                     </Box>
-                    <Box p={1}>
-                        <Box fontSize="h6.fontSize" fontWeight="fontWeightMedium" mb={1}>{name}</Box>
+                    <Box id="plateInfo" p={1}>
+                        <Box id="name" fontSize="h6.fontSize" fontWeight="fontWeightMedium" mb={1}>{name}</Box>
                         <Box fontWeight="fontWeightRegular" display="flex" alignItems="center">
                             Category: <Box fontWeight="fontWeightMedium" ml={1}>$ {category}</Box>
                         </Box>
                         <Box fontWeight="fontWeightRegular" display="flex" alignItems="center">
-                            Price: <Box fontWeight="fontWeightMedium" ml={1}>$ {price}</Box>
+                            Price: <Box id="price" fontWeight="fontWeightMedium" ml={1}>$ {price}</Box>
                         </Box>
-                        <Box fontWeight="fontWeightRegular"> {description}</Box>
+                        <Box id="description" fontWeight="fontWeightRegular"> {description}</Box>
                         <Box mt={1}>
 
                             <TextField

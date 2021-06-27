@@ -29,9 +29,9 @@ const Orders = () => {
     }
     return (
         <>
-            <Typography variant="h6" color="initial">Orders</Typography>
+            <Typography variant="h6" className="order" color="initial">Orders</Typography>
             <Grid container spacing={2}>
-                {orders.map(order => (
+                {orders.map((order,orderIdx) => (
                     <Order
                         key={order.id}
                         orderInfo={order}

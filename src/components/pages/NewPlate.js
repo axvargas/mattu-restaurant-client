@@ -190,7 +190,7 @@ const NewPlate = () => {
                         <Avatar className={classes.avatar}>
                             <FastfoodIcon />
                         </Avatar>
-                        <Typography component="h1" variant="h5">
+                        <Typography component="h1" variant="h5" id="new-plate">
                             New Plate
                         </Typography>
                         <form className={classes.form} onSubmit={handleSubmit(onSubmit)} noValidate>
@@ -302,6 +302,7 @@ const NewPlate = () => {
                                 color="primary"
                                 disabled={formState.isSubmitting}
                                 className={classes.submit}
+                                id="add-new-plate"
                             >
                                 Add the new plate
                     		</Button>
