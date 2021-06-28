@@ -18,28 +18,28 @@ const Orders = () => {
     // eslint-disable-next-line
     }, [])
 
-  const handleSnapshot = (snapshot) => {
-    const response = snapshot.docs.map(doc => {
-      return {
-        id: doc.id,
-        ...doc.data()
-      };
-    });
-    setOrders(response);
-  };
-  return (
-    <>
-      <Typography variant="h6" color="initial">Orders</Typography>
-      <Grid container spacing={2}>
-        {orders.map(order => (
-          <Order
-            key={order.id}
-            orderInfo={order}
-          />
-        ))}
-      </Grid>
-    </>
-  );
-};
+    const handleSnapshot = (snapshot) => {
+        const response = snapshot.docs.map(doc => {
+            return {
+                id: doc.id,
+                ...doc.data()
+            }
+        })
+        setOrders(response)
+    }
+    return (
+        <>
+            <Typography variant="h6" className="order" color="initial">Orders</Typography>
+            <Grid container spacing={2}>
+                {orders.map((order,orderIdx) => (
+                    <Order
+                        key={order.id}
+                        orderInfo={order}
+                    />
+                ))}
+            </Grid>
+        </>
+    )
+}
 
 export default Orders;

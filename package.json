@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^6.6.0"
   }
 }

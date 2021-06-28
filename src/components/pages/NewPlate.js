@@ -303,6 +303,7 @@ const NewPlate = () => {
                 color="primary"
                 disabled={formState.isSubmitting}
                 className={classes.submit}
+                id="add-new-plate"
               >
                 Add the new plate
               </Button>

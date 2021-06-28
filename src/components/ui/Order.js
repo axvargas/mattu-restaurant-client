@@ -58,7 +58,7 @@ const Order = ({ orderInfo }) => {
   };
 
   return (
-    <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+    <Grid id={`order-${id}`} item xs={12} sm={6} md={4} lg={3} xl={2}>
       <Box borderRadius="borderRadius" boxShadow={3} p={2} mt={1} borderTop={4}>
         <Box p={1}>
           <Box fontSize="h6.fontSize" fontWeight="fontWeightMedium" mb={1}>{id}</Box>

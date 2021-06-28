@@ -24,26 +24,25 @@ const Plate = ({ plate }) => {
     }
   };
 
-  return (
-    <Grid item xs={12}>
-      <Box borderRadius="borderRadius" boxShadow={3} p={2} mt={1} borderTop={4} borderColor={className ? 'primary.main' : 'text.disabled'}>
-        <Box display={{ xs: 'block',
-          md: 'flex' }} flexDirection="row" >
-          <Box p={1} display="flex" justifyContent="center" alignItems="center">
-            <Box height={160} width={!matches ? 'auto' : 250}>
-              <img alt="plate_img" src={image} height="100%" width="100%" />
-            </Box>
-          </Box>
-          <Box p={1}>
-            <Box fontSize="h6.fontSize" fontWeight="fontWeightMedium" mb={1}>{name}</Box>
-            <Box fontWeight="fontWeightRegular" display="flex" alignItems="center">
+    return (
+        <Grid item xs={12}>
+            <Box borderRadius="borderRadius" boxShadow={3} p={2} mt={1} borderTop={4} borderColor={className ? "primary.main" : "text.disabled"}>
+                <Box display={{ xs: 'block', md: 'flex' }} flexDirection="row" >
+                    <Box p={1} display="flex" justifyContent="center" alignItems="center">
+                        <Box height={160} width={!matches ? "auto" : 250}>
+                            <img alt="plate_img" src={image} height="100%" width="100%" />
+                        </Box>
+                    </Box>
+                    <Box id="plateInfo" p={1}>
+                        <Box id="name" fontSize="h6.fontSize" fontWeight="fontWeightMedium" mb={1}>{name}</Box>
+                        <Box fontWeight="fontWeightRegular" display="flex" alignItems="center">
                             Category: <Box fontWeight="fontWeightMedium" ml={1}>$ {category}</Box>
-            </Box>
-            <Box fontWeight="fontWeightRegular" display="flex" alignItems="center">
-                            Price: <Box fontWeight="fontWeightMedium" ml={1}>$ {price}</Box>
-            </Box>
-            <Box fontWeight="fontWeightRegular"> {description}</Box>
-            <Box mt={1}>
+                        </Box>
+                        <Box fontWeight="fontWeightRegular" display="flex" alignItems="center">
+                            Price: <Box id="price" fontWeight="fontWeightMedium" ml={1}>$ {price}</Box>
+                        </Box>
+                        <Box id="description" fontWeight="fontWeightRegular"> {description}</Box>
+                        <Box mt={1}>
 
               <TextField
                 id="outlined-select-status"

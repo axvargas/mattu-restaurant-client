@@ -32,6 +32,7 @@ const Menu = () => {
           to="/new-plate"
           variant="contained"
           color="primary"
+          id="add-new-plate"
         >
                     Add new plate
         </Button>
